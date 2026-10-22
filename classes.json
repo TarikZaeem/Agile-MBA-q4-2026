@@ -1,0 +1,73 @@
+{
+  "fridayDiscussion": {
+    "url": "https://thejobhackers.slack.com/docs/T830H9TGF/F0C8FKMUSAY?focus_section_id=temp:C:GBS2a8bf7ad061b46aa88d2c7131",
+    "timezone": "America/Los_Angeles",
+    "time": "07:30"
+  },
+  "teachers": {
+    "kyle":   { "name": "Kyle Aretae",    "url": "https://thejobhackers.slack.com/team/U033DKAQ6FQ", "color": "#5b4bff" },
+    "jim":    { "name": "Jim Schibler",   "url": "https://thejobhackers.slack.com/team/U948N4G8K",   "color": "#12b5cb" },
+    "edward": { "name": "Edward Gordon",  "url": "https://thejobhackers.slack.com/team/UA12PTP99",   "color": "#ff7a59" },
+    "sam":    { "name": "Sam Horodezky",  "url": "https://thejobhackers.slack.com/team/U07H87FDCQG", "color": "#12a37f" },
+    "ryan":   { "name": "Ryan Zokol",     "url": "https://thejobhackers.slack.com/team/U05TNTZH96G", "color": "#d6409f" },
+    "andrew": { "name": "Andrew Long",    "url": "https://thejobhackers.slack.com/team/U06T528T24S", "color": "#e0a100" },
+    "mike":   { "name": "Mike Russell",   "url": "https://thejobhackers.slack.com/team/U05B5MQ7Z4L", "color": "#3b82f6" },
+    "thomas": { "name": "Thomas Meloche", "url": "https://thejobhackers.slack.com/team/U01BW7E529M", "color": "#8b5cf6" }
+  },
+  "classes": [
+    {
+      "n": 1,
+      "title": "Foundations of Agile, Thinking About Work, Views of Agile and the Scientific Method",
+      "date": "14 Oct 2026",
+      "teachers": ["kyle"],
+      "recording": "https://us02web.zoom.us/rec/share/KX8WaMebXdGoIghqNBuAprbHGrU2pWanSq6CfeugPhp8gCxneFQjv1EMMsXvp6bz.E_EYzSxR80IxzMDs",
+      "files": [
+        ["slides", "https://thejobhackers.slack.com/files/UA12PTP99/F0C91UNGGPQ/kylea_-_class_1__introduction_-_14_october_2026_.pdf"],
+        ["transcript", "https://thejobhackers.slack.com/files/UA12PTP99/F0C95RQMWD7/class1_q4_2026_14october2026_txt.txt"]
+      ],
+      "hw": [
+        ["Check out the Agile Manifesto and the Agile Principles (the prompt is in the last four slides of the PDF)", null],
+        ["agilemanifesto.org", "https://agilemanifesto.org/"]
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Agile Terminology, Uncertainty, and Relative Estimation",
+      "date": "15 Oct 2026",
+      "teachers": ["jim", "edward"],
+      "recording": "https://us02web.zoom.us/rec/share/Nta7HsiBD3vKvFi4CSsJyUteq14GCLg3d6pj7oORK6CRMgotmnoMfksULNkBda4c.NSLjwaHNHzx_9FhZ",
+      "files": [
+        ["slides", "https://thejobhackers.slack.com/files/UA12PTP99/F0C9T3CR8HL/edwardg-jims_-_class_2__agile_principles_and_estimation_-_15_october_2026_.pdf"],
+        ["transcript", "https://thejobhackers.slack.com/files/UA12PTP99/F0C9DLN3PPH/class2_q4_2026_15october2026_txt.txt"],
+        ["clip", "https://zoom.us/clips/share/Z8VkHGzwS6qbJSTFnK3nvw"],
+        ["mural", "https://app.mural.co/t/jobhackers9970/m/jobhackers9970/1784791856741/a26be23058de89149c4fff5231d5c09ca2142136?sender=u80a39bdaddabb257676b6722"]
+      ],
+      "hw": [
+        ["Sign up and come to the Friday Discussions (7:30-9am PDT)", "https://thejobhackers.slack.com/docs/T830H9TGF/F0C8FKMUSAY?focus_section_id=temp:C:GBS2a8bf7ad061b46aa88d2c7131"],
+        ["If you dropped off early: watch the 20-minute video by Henrik Kniberg", "https://www.youtube.com/watch?v=502ILHjX9EE"]
+      ]
+    },
+    {
+      "n": 3,
+      "title": "Scrum Introduction Part 1: The What and Why",
+      "date": "20 Oct 2026",
+      "teachers": ["jim"],
+      "recording": "https://us02web.zoom.us/rec/play/Ewz1h-YUBBbNmGfk7vbTQSya4zrtMfKRcTEHylMuHmvZLDPxXsNbnKQb4WjOMmfyJdv72vVoi3nSn9RQ.7FdYeB2zAWPDRCoc",
+      "files": [
+        ["slides", "https://thejobhackers.slack.com/files/U948N4G8K/F0CAPDT16TF/class_3_-_scrum_introduction_-_part_1.pdf"],
+        ["chat", "https://thejobhackers.slack.com/files/U948N4G8K/F0CAPDYDCTX/gmt20261020-143824_recordingnewchat.txt"],
+        ["vtt", "https://thejobhackers.slack.com/files/U948N4G8K/F0CASPPCS5C/gmt20261020-143824_recording.cc.vtt"]
+      ],
+      "hw": []
+    },
+    { "n": 4,  "title": "Scrum Introduction Part 2: The How", "teachers": ["jim"], "at": null },
+    { "n": 5,  "title": "Value Part 1 — Value, Backlogs, Test and Behaviour Driven Development (TDD/BDD)", "teachers": ["sam"] },
+    { "n": 6,  "title": "Value Part 2 — Requirements and User Stories, Trade-offs, and Technical Debt", "teachers": ["sam"] },
+    { "n": 7,  "title": "Flow-Based Product Development Part 1 — Themes 1-3", "teachers": ["ryan", "andrew"] },
+    { "n": 8,  "title": "Principles of Product Development Flow Part 2 — Themes 3-5", "teachers": ["andrew"] },
+    { "n": 9,  "title": "Principles of Product Development Flow Part 3 — Themes 6-8", "teachers": ["andrew"] },
+    { "n": 10, "title": "Introduction to Systems Thinking", "teachers": ["mike"] },
+    { "n": 11, "title": "Cognitive Biases and Illusions", "teachers": ["thomas"] },
+    { "n": 12, "title": "Peopleware", "teachers": ["mike"] }
+  ]
+}

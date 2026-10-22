@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agile MBA™ — Q4 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f6fb; --surface:#ffffff; --ink:#1b1d2e; --muted:#6b7089; --line:#e6e8f2;
+  --brand:#5b4bff; --brand2:#12b5cb; --accent:#ff7a59; --ok:#12a37f; --soon:#a0a5bd;
+  --shadow:0 10px 30px -12px rgba(40,40,100,.18);
+}
+:root[data-theme="dark"]{
+  --bg:#0e0f1a; --surface:#171829; --ink:#eef0ff; --muted:#9a9fbd; --line:#26283f;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0f1a; --surface:#171829; --ink:#eef0ff; --muted:#9a9fbd; --line:#26283f;
+    --shadow:0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal","Inter",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+html[lang="en"] body{font-family:"Inter","Tajawal",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.en{direction:ltr;unicode-bidi:isolate;font-family:"Inter","Tajawal",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--brand2);outline-offset:2px;border-radius:8px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:56px 0 90px;
+  background:radial-gradient(900px 400px at 85% -10%,#12b5cb88,transparent 60%),
+             radial-gradient(700px 400px at 10% 110%,#ff7a5977,transparent 60%),
+             linear-gradient(135deg,#2a1f8f,#5b4bff 55%,#7b5bff)}
+.hero::after{content:"";position:absolute;inset:0;opacity:.12;
+  background-image:radial-gradient(#fff 1px,transparent 1px);background-size:22px 22px}
+.hero .wrap{position:relative;z-index:1}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:46px;gap:10px}
+.logo{font-weight:800;letter-spacing:.3px;display:flex;align-items:center;gap:10px}
+.logo i{width:34px;height:34px;border-radius:10px;background:#ffffff26;display:grid;place-items:center;font-style:normal;backdrop-filter:blur(6px)}
+.tools{display:flex;gap:8px}
+.tool-btn{background:#ffffff22;border:1px solid #ffffff44;color:#fff;border-radius:999px;padding:7px 14px;cursor:pointer;font:inherit;font-size:14px;font-weight:600}
+.tool-btn:hover{background:#ffffff33}
+.badge{display:inline-block;background:#ffffff24;border:1px solid #ffffff40;border-radius:999px;padding:4px 14px;font-size:14px;margin-bottom:16px}
+h1{font-size:clamp(30px,5vw,52px);font-weight:800;line-height:1.2}
+h1 small{display:block;font-size:.45em;font-weight:500;opacity:.85;margin-top:10px}
+.hero p{max-width:620px;margin-top:16px;opacity:.9;font-size:18px}
+.hero-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.hero-nav a{background:#fff;color:#2a1f8f;font-weight:700;border-radius:12px;padding:10px 18px;font-size:15px;transition:.2s}
+.hero-nav a.ghost{background:#ffffff1f;color:#fff;border:1px solid #ffffff55}
+.hero-nav a:hover{transform:translateY(-2px)}
+
+/* stats */
+.stats{margin-top:-52px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow)}
+.stat b{font-size:30px;font-weight:800;display:block;line-height:1.2}
+.stat span{color:var(--muted);font-size:14px}
+.stat small{display:block;color:var(--muted);font-size:12.5px;margin-top:6px}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:10px}
+.bar div{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--brand2));transition:width .8s ease}
+
+/* countdown */
+.next-card{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px 24px;box-shadow:var(--shadow);
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.next-card small{color:var(--accent);font-weight:700;font-size:13px}
+.next-card h3{font-size:20px;margin:2px 0}
+.next-card p{color:var(--muted);font-size:14px}
+.cd{display:flex;gap:10px}
+.cd div{min-width:64px;text-align:center;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:8px 6px}
+.cd b{display:block;font:800 24px/1.2 "Inter",sans-serif;font-variant-numeric:tabular-nums}
+.cd span{font-size:12px;color:var(--muted)}
+
+section{padding:46px 0 0}
+.sec-title{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-title h2{font-size:26px;font-weight:800}
+.sec-title .sub{font-size:.7em;color:var(--muted);font-weight:500}
+.sec-title::before{content:"";width:8px;height:28px;border-radius:6px;background:linear-gradient(var(--brand),var(--brand2))}
+
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.feature p{color:var(--muted);max-width:640px}
+.feature h3{font-size:20px;margin-bottom:4px}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-bottom:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer;font:inherit;font-size:14px}
+.chip.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.search{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:12px;padding:9px 14px;font:inherit;min-width:240px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px;transition:.25s;overflow:hidden}
+.card:hover{transform:translateY(-4px)}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c,var(--soon))}
+.card.live{--c:linear-gradient(90deg,var(--brand),var(--brand2))}
+.card.latest{border-color:var(--brand);box-shadow:0 0 0 3px #5b4bff22,var(--shadow)}
+.card.done{--c:linear-gradient(90deg,var(--ok),#5be3b8)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.head .r{display:flex;gap:6px;align-items:center}
+.num{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;background:var(--soon);font-family:"Inter"}
+.live .num{background:linear-gradient(135deg,var(--brand),var(--brand2))}
+.done .num{background:linear-gradient(135deg,var(--ok),#5be3b8)}
+.status{font-size:12.5px;font-weight:700;padding:3px 12px;border-radius:99px;background:var(--line);color:var(--muted)}
+.live .status{background:#12a37f22;color:var(--ok)}
+.new{font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px;color:#fff;background:linear-gradient(135deg,var(--accent),#ff4d8d);animation:pulse 2s infinite}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.new{animation:none}}
+.card h3{font-size:17px;line-height:1.5;font-weight:700}
+.date{color:var(--muted);font-size:13.5px}
+.teachers{display:flex;flex-wrap:wrap;gap:8px}
+.teacher{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding-block:3px;padding-inline:4px 12px;font-size:13.5px}
+.teacher:hover{border-color:var(--brand)}
+.av{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700;font-family:"Inter"}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;border-radius:11px;padding:8px 14px;border:1px solid var(--line);background:var(--bg);transition:.2s}
+.btn:hover{border-color:var(--brand);color:var(--brand)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:#4a3be6;color:#fff}
+.soon-note{color:var(--muted);font-size:14px;border:1px dashed var(--line);border-radius:11px;padding:8px 14px;text-align:center}
+
+.track{display:flex;flex-wrap:wrap;gap:8px}
+.track label{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:6px 12px;user-select:none}
+.track label:has(input:checked){border-color:var(--ok);color:var(--ok);background:#12a37f14}
+.track input{width:17px;height:17px;accent-color:var(--ok);cursor:pointer}
+
+details.hw,details.notes{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+details summary{cursor:pointer;font-weight:700;list-style:none}
+details.hw summary{color:var(--accent)} details.hw summary::before{content:"📝 "}
+details.notes summary{color:var(--brand)} details.notes summary::before{content:"✏️ "}
+details[open] summary{margin-bottom:8px}
+details.hw ul{padding-inline-start:18px;display:grid;gap:6px}
+details.hw a{color:var(--brand);text-decoration:underline;text-underline-offset:3px}
+details.notes textarea{width:100%;min-height:96px;resize:vertical;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:14px;padding:10px}
+details.notes small{display:block;color:var(--ok);height:16px;font-size:12px;margin-top:4px;opacity:0;transition:opacity .3s}
+details.notes small.on{opacity:1}
+.empty{text-align:center;color:var(--muted);padding:40px 0;display:none}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
+.tile .ic{font-size:30px}
+.tile h3{margin:6px 0;font-size:19px}
+.tile p{color:var(--muted);margin-bottom:14px}
+
+footer{margin-top:60px;padding:30px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:14px}
+footer .kb{display:block;margin-top:8px;font-size:12.5px;opacity:.85}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.search{width:100%}.cd div{min-width:56px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <div class="logo"><i>⚡</i><span class="en">The Job Hackers</span></div>
+      <div class="tools">
+        <button class="tool-btn" id="langBtn" type="button" aria-label="Language">EN</button>
+        <button class="tool-btn" id="themeBtn" type="button" data-i18n="theme">🌓 الوضع</button>
+      </div>
+    </div>
+    <span class="badge" data-i18n="badge"></span>
+    <h1><span class="en">Agile MBA™</span><small class="en">Recordings &amp; Presentations · Q4 2026</small></h1>
+    <p data-i18n="heroText"></p>
+    <nav class="hero-nav">
+      <a href="#orientation" data-i18n="navOrientation"></a>
+      <a href="#classes" data-i18n="navClasses"></a>
+      <a href="#friday" class="ghost" data-i18n="navFriday"></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b id="stTotal">–</b><span data-i18n="stTotal"></span></div>
+    <div class="stat"><b id="stLive">–</b><span data-i18n="stLive"></span></div>
+    <div class="stat"><b id="stPct">0%</b><span data-i18n="stPersonal"></span>
+      <div class="bar"><div id="barFill"></div></div>
+      <small id="stDetail"></small></div>
+  </div>
+
+  <div class="next-card" id="nextCard" aria-live="off">
+    <div>
+      <small data-i18n="nextLabel"></small>
+      <h3 id="nextTitle"></h3>
+      <p id="nextWhen"></p>
+    </div>
+    <div class="cd" id="cd">
+      <div><b id="cdD">0</b><span data-i18n="uD"></span></div>
+      <div><b id="cdH">0</b><span data-i18n="uH"></span></div>
+      <div><b id="cdM">0</b><span data-i18n="uM"></span></div>
+      <div><b id="cdS">0</b><span data-i18n="uS"></span></div>
+    </div>
+  </div>
+
+  <section id="orientation">
+    <div class="sec-title"><h2 data-i18n="secOrientation"></h2></div>
+    <div class="feature">
+      <div>
+        <h3 class="en">Monday Orientation Session</h3>
+        <p data-i18n="orientationText"></p>
+      </div>
+      <a class="btn primary" target="_blank" rel="noopener" data-i18n="openSession" href="https://thejobhackers.slack.com/docs/T830H9TGF/F0C8FKMUSAY?focus_section_id=temp:C:GBS4e62d72f018a4805b7bba520a"></a>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="sec-title"><h2 data-i18n="secClasses"></h2><span class="sub en">Agile MBA™ Classes</span></div>
+    <div class="toolbar">
+      <div class="chips" id="chips">
+        <button class="chip on" data-f="all" type="button" data-i18n="fAll"></button>
+        <button class="chip" data-f="live" type="button" data-i18n="fLive"></button>
+        <button class="chip" data-f="soon" type="button" data-i18n="fSoon"></button>
+      </div>
+      <input class="search" id="q" type="search" data-i18n-ph="search">
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" data-i18n="noResults"></p>
+  </section>
+
+  <section id="friday">
+    <div class="sec-title"><h2 data-i18n="secWeekly"></h2></div>
+    <div class="two">
+      <div class="tile">
+        <div class="ic">💬</div>
+        <h3 class="en">Friday Discussion Sessions</h3>
+        <p data-i18n="fridayText"></p>
+        <a class="btn primary" id="fridayLink" target="_blank" rel="noopener" data-i18n="fridayBtn" href="#"></a>
+      </div>
+      <div class="tile">
+        <div class="ic">🤝</div>
+        <h3 class="en">Tuesday Meetups</h3>
+        <p data-i18n="tuesdayText"></p>
+        <span class="soon-note" data-i18n="tuesdaySoon"></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span data-i18n="footer"></span> <span class="en">Agile MBA™ · Q4 2026</span>
+  <span class="kb" data-i18n="kbHint"></span>
+</footer>
+
+<script type="application/json" id="fallback">{"fridayDiscussion":{"url":"https://thejobhackers.slack.com/docs/T830H9TGF/F0C8FKMUSAY?focus_section_id=temp:C:GBS2a8bf7ad061b46aa88d2c7131","timezone":"America/Los_Angeles","time":"07:30"},"teachers":{"kyle":{"name":"Kyle Aretae","url":"https://thejobhackers.slack.com/team/U033DKAQ6FQ","color":"#5b4bff"},"jim":{"name":"Jim Schibler","url":"https://thejobhackers.slack.com/team/U948N4G8K","color":"#12b5cb"},"edward":{"name":"Edward Gordon","url":"https://thejobhackers.slack.com/team/UA12PTP99","color":"#ff7a59"},"sam":{"name":"Sam Horodezky","url":"https://thejobhackers.slack.com/team/U07H87FDCQG","color":"#12a37f"},"ryan":{"name":"Ryan Zokol","url":"https://thejobhackers.slack.com/team/U05TNTZH96G","color":"#d6409f"},"andrew":{"name":"Andrew Long","url":"https://thejobhackers.slack.com/team/U06T528T24S","color":"#e0a100"},"mike":{"name":"Mike Russell","url":"https://thejobhackers.slack.com/team/U05B5MQ7Z4L","color":"#3b82f6"},"thomas":{"name":"Thomas Meloche","url":"https://thejobhackers.slack.com/team/U01BW7E529M","color":"#8b5cf6"}},"classes":[{"n":1,"title":"Foundations of Agile, Thinking About Work, Views of Agile and the Scientific Method","date":"14 Oct 2026","teachers":["kyle"],"recording":"https://us02web.zoom.us/rec/share/KX8WaMebXdGoIghqNBuAprbHGrU2pWanSq6CfeugPhp8gCxneFQjv1EMMsXvp6bz.E_EYzSxR80IxzMDs","files":[["slides","https://thejobhackers.slack.com/files/UA12PTP99/F0C91UNGGPQ/kylea_-_class_1__introduction_-_14_october_2026_.pdf"],["transcript","https://thejobhackers.slack.com/files/UA12PTP99/F0C95RQMWD7/class1_q4_2026_14october2026_txt.txt"]],"hw":[["Check out the Agile Manifesto and the Agile Principles (the prompt is in the last four slides of the PDF)",null],["agilemanifesto.org","https://agilemanifesto.org/"]]},{"n":2,"title":"Agile Terminology, Uncertainty, and Relative Estimation","date":"15 Oct 2026","teachers":["jim","edward"],"recording":"https://us02web.zoom.us/rec/share/Nta7HsiBD3vKvFi4CSsJyUteq14GCLg3d6pj7oORK6CRMgotmnoMfksULNkBda4c.NSLjwaHNHzx_9FhZ","files":[["slides","https://thejobhackers.slack.com/files/UA12PTP99/F0C9T3CR8HL/edwardg-jims_-_class_2__agile_principles_and_estimation_-_15_october_2026_.pdf"],["transcript","https://thejobhackers.slack.com/files/UA12PTP99/F0C9DLN3PPH/class2_q4_2026_15october2026_txt.txt"],["clip","https://zoom.us/clips/share/Z8VkHGzwS6qbJSTFnK3nvw"],["mural","https://app.mural.co/t/jobhackers9970/m/jobhackers9970/1784791856741/a26be23058de89149c4fff5231d5c09ca2142136?sender=u80a39bdaddabb257676b6722"]],"hw":[["Sign up and come to the Friday Discussions (7:30-9am PDT)","https://thejobhackers.slack.com/docs/T830H9TGF/F0C8FKMUSAY?focus_section_id=temp:C:GBS2a8bf7ad061b46aa88d2c7131"],["If you dropped off early: watch the 20-minute video by Henrik Kniberg","https://www.youtube.com/watch?v=502ILHjX9EE"]]},{"n":3,"title":"Scrum Introduction Part 1: The What and Why","date":"20 Oct 2026","teachers":["jim"],"recording":"https://us02web.zoom.us/rec/play/Ewz1h-YUBBbNmGfk7vbTQSya4zrtMfKRcTEHylMuHmvZLDPxXsNbnKQb4WjOMmfyJdv72vVoi3nSn9RQ.7FdYeB2zAWPDRCoc","files":[["slides","https://thejobhackers.slack.com/files/U948N4G8K/F0CAPDT16TF/class_3_-_scrum_introduction_-_part_1.pdf"],["chat","https://thejobhackers.slack.com/files/U948N4G8K/F0CAPDYDCTX/gmt20261020-143824_recordingnewchat.txt"],["vtt","https://thejobhackers.slack.com/files/U948N4G8K/F0CASPPCS5C/gmt20261020-143824_recording.cc.vtt"]],"hw":[]},{"n":4,"title":"Scrum Introduction Part 2: The How","teachers":["jim"],"at":null},{"n":5,"title":"Value Part 1 — Value, Backlogs, Test and Behaviour Driven Development (TDD/BDD)","teachers":["sam"]},{"n":6,"title":"Value Part 2 — Requirements and User Stories, Trade-offs, and Technical Debt","teachers":["sam"]},{"n":7,"title":"Flow-Based Product Development Part 1 — Themes 1-3","teachers":["ryan","andrew"]},{"n":8,"title":"Principles of Product Development Flow Part 2 — Themes 3-5","teachers":["andrew"]},{"n":9,"title":"Principles of Product Development Flow Part 3 — Themes 6-8","teachers":["andrew"]},{"n":10,"title":"Introduction to Systems Thinking","teachers":["mike"]},{"n":11,"title":"Cognitive Biases and Illusions","teachers":["thomas"]},{"n":12,"title":"Peopleware","teachers":["mike"]}]}</script>
+<script>
+const STR = {
+  ar:{
+    pageTitle:"Agile MBA™ — الربع الرابع 2026", theme:"🌓 الوضع", langBtn:"EN",
+    badge:"التسجيلات والعروض التقديمية",
+    heroText:"كل ما تحتاجه في مكان واحد: تسجيلات اللقاءات، الشرائح، النصوص المكتوبة والواجبات لكل لقاء على حدة.",
+    navOrientation:"جلسة التوجيه", navClasses:"اللقاءات", navFriday:"نقاشات الجمعة",
+    stTotal:"لقاء في الدورة", stLive:"لقاء متاح الآن", stPersonal:"تقدّمك الشخصي",
+    detail:"شاهدت {w} من {l} متاح · واجبات منجزة: {h}",
+    nextLabel:"الموعد القادم", fridayEvt:"نقاش الجمعة (Friday Discussion)",
+    uD:"يوم", uH:"ساعة", uM:"دقيقة", uS:"ثانية", yourTime:"بتوقيتك",
+    secOrientation:"جلسة التوجيه (Orientation)",
+    orientationText:"الهدف من هذه الجلسة أن تستفيد من الدورة بأقصى شكل. يرجى مشاهدة التسجيل والاطلاع على الشرائح قبل بدء الدورة.",
+    openSession:"▶ فتح الجلسة", secClasses:"اللقاءات",
+    fAll:"الكل", fLive:"المتاح", fSoon:"قريباً",
+    search:"ابحث عن لقاء أو مدرّس…  ( / )", noResults:"لا توجد نتائج مطابقة.",
+    secWeekly:"الجلسات الأسبوعية",
+    fridayText:"للاستفادة القصوى من الدورة، انضم إلى جلسات النقاش يوم الجمعة (7:30 – 9:00 صباحاً بتوقيت PDT).",
+    fridayBtn:"التسجيل في الجلسات",
+    tuesdayText:"لقاءات الثلاثاء المفتوحة للتواصل مع زملاء الدورة.", tuesdaySoon:"سيتم إضافة التفاصيل لاحقاً",
+    footer:"صفحة شخصية لتنظيم مواد دورة",
+    kbHint:"اختصارات: ↑ ↓ للتنقل بين اللقاءات · Enter لفتح التسجيل · / للبحث · L للغة · T للوضع",
+    cls:"اللقاء", live:"متاح", soon:"قريباً", newB:"جديد", watch:"▶ مشاهدة التسجيل", noRec:"التسجيل غير متوفر بعد",
+    hw:"الواجب والمراجعة", watched:"شاهدت", hwDone:"سلّمت الواجب",
+    notes:"ملاحظاتي", notesPh:"اكتب ملخصك أو أسئلتك هنا…", saved:"✓ تم الحفظ",
+    slides:"📄 الشرائح (PDF)", transcript:"📝 النص المكتوب", chat:"💬 محادثة اللقاء", vtt:"💬 الترجمة النصية (VTT)",
+    clip:"🎬 مثال Home Improvement Backlog", mural:"🧩 لوحة Mural التطبيقية"
+  },
+  en:{
+    pageTitle:"Agile MBA™ — Q4 2026", theme:"🌓 Theme", langBtn:"العربية",
+    badge:"Recordings & Presentations",
+    heroText:"Everything in one place: class recordings, slides, transcripts and homework for each session.",
+    navOrientation:"Orientation", navClasses:"Classes", navFriday:"Friday Discussions",
+    stTotal:"classes in the course", stLive:"classes available now", stPersonal:"your personal progress",
+    detail:"Watched {w} of {l} available · homework done: {h}",
+    nextLabel:"Next up", fridayEvt:"Friday Discussion",
+    uD:"days", uH:"hours", uM:"min", uS:"sec", yourTime:"your time",
+    secOrientation:"Orientation Session",
+    orientationText:"The purpose of this session is to help you get the most out of the course. Please go through the recording and slides before the course starts.",
+    openSession:"▶ Open session", secClasses:"Classes",
+    fAll:"All", fLive:"Available", fSoon:"Coming soon",
+    search:"Search a class or teacher…  ( / )", noResults:"No matching results.",
+    secWeekly:"Weekly Sessions",
+    fridayText:"To get the most out of the course, join the Friday discussion sessions (7:30–9:00 am PDT).",
+    fridayBtn:"Sign up for the sessions",
+    tuesdayText:"Open Tuesday meetups to connect with your course peers.", tuesdaySoon:"Details will be added later",
+    footer:"A personal page to organize the course materials of",
+    kbHint:"Shortcuts: ↑ ↓ move between classes · Enter opens the recording · / search · L language · T theme",
+    cls:"Class", live:"Available", soon:"Coming soon", newB:"NEW", watch:"▶ Watch recording", noRec:"Recording not available yet",
+    hw:"Homework & review", watched:"Watched", hwDone:"Homework done",
+    notes:"My notes", notesPh:"Write your summary or questions here…", saved:"✓ Saved",
+    slides:"📄 Slides (PDF)", transcript:"📝 Transcript", chat:"💬 Class chat", vtt:"💬 Captions (VTT)",
+    clip:"🎬 Home Improvement Backlog example", mural:"🧩 Mural board"
+  }
+};
+
+let DATA = null, lang = "ar", filter = "all", term = "";
+const $ = id => document.getElementById(id);
+const grid = $("grid");
+const L = (k, v) => { let s = STR[lang][k] ?? k; if(v) for(const x in v) s = s.replace("{"+x+"}", v[x]); return s; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- storage ---------- */
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem(k)) || {}; }catch(e){ return {}; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+let PROG = store.get("amba-progress");   // {n:{w:bool,h:bool}}
+let NOTES = store.get("amba-notes");     // {n:"text"}
+try{ const s = localStorage.getItem("amba-lang"); if(s==="ar"||s==="en") lang = s; }catch(e){}
+
+/* ---------- data loading (classes.json, with embedded fallback) ---------- */
+fetch("classes.json", {cache:"no-store"})
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .catch(() => JSON.parse($("fallback").textContent))
+  .then(d => { DATA = d; $("fridayLink").href = d.fridayDiscussion.url; setLang(lang); setInterval(tick, 1000); });
+
+/* ---------- render ---------- */
+function latestLive(){
+  const live = DATA.classes.filter(c => c.recording);
+  return live.length ? live[live.length-1].n : null;
+}
+function render(){
+  const latest = latestLive();
+  grid.innerHTML = DATA.classes.map(c=>{
+    const live = !!c.recording, p = PROG[c.n] || {}, note = NOTES[c.n] || "";
+    const teachers = c.teachers.map(k=>{
+      const t = DATA.teachers[k];
+      return `<a class="teacher en" href="${t.url}" target="_blank" rel="noopener"><span class="av" style="background:${t.color}">${esc(t.name[0])}</span>${esc(t.name)}</a>`;
+    }).join("");
+    let body;
+    if(live){
+      const files = (c.files||[]).map(f=>`<a class="btn" href="${f[1]}" target="_blank" rel="noopener">${L(f[0])}</a>`).join("");
+      body = `<div class="actions"><a class="btn primary rec" href="${c.recording}" target="_blank" rel="noopener">${L("watch")}</a>${files}</div>
+        <div class="track">
+          <label><input type="checkbox" data-n="${c.n}" data-k="w" ${p.w?"checked":""}> ${L("watched")}</label>
+          <label><input type="checkbox" data-n="${c.n}" data-k="h" ${p.h?"checked":""}> ${L("hwDone")}</label>
+        </div>`;
+    } else body = `<div class="soon-note">${L("noRec")}</div>`;
+    const hw = (c.hw && c.hw.length) ? `<details class="hw"><summary>${L("hw")}</summary><ul>` +
+      c.hw.map(h => h[1] ? `<li class="en"><a href="${h[1]}" target="_blank" rel="noopener">${esc(h[0])}</a></li>` : `<li class="en">${esc(h[0])}</li>`).join("") + `</ul></details>` : "";
+    const notes = `<details class="notes" ${note?"open":""}><summary>${L("notes")}</summary>
+        <textarea dir="auto" data-n="${c.n}" placeholder="${L("notesPh")}">${esc(note)}</textarea><small class="saved">${L("saved")}</small></details>`;
+    return `<article class="card ${live?"live":""} ${c.n===latest?"latest":""} ${p.w?"done":""}" tabindex="0" id="class-${c.n}"
+        data-live="${live}" data-text="${esc((c.title+" "+c.teachers.map(k=>DATA.teachers[k].name).join(" ")).toLowerCase())}">
+      <div class="head"><div class="num">${c.n}</div>
+        <div class="r">${c.n===latest?`<span class="new">${L("newB")}</span>`:""}<span class="status">${live?L("live"):L("soon")}</span></div></div>
+      <h3>${L("cls")} ${c.n} — <span class="en">${esc(c.title)}</span></h3>
+      ${c.date?`<div class="date">📅 <span class="en">${c.date}</span></div>`:""}
+      <div class="teachers">${teachers}</div>
+      ${body}${hw}${notes}
+    </article>`;
+  }).join("");
+  stats(); apply();
+}
+
+function stats(){
+  const total = DATA.classes.length, live = DATA.classes.filter(c=>c.recording).length;
+  let w = 0, h = 0;
+  DATA.classes.forEach(c => { const p = PROG[c.n]||{}; if(p.w) w++; if(p.h) h++; });
+  $("stTotal").textContent = total;
+  $("stLive").textContent = live;
+  const pct = Math.round(w/total*100);
+  $("stPct").textContent = pct + "%";
+  $("barFill").style.width = pct + "%";
+  $("stDetail").textContent = L("detail", {w, l:live, h});
+}
+
+function apply(){
+  let shown = 0;
+  grid.querySelectorAll(".card").forEach(el=>{
+    const okF = filter==="all" || (filter==="live")===(el.dataset.live==="true");
+    const okQ = !term || el.dataset.text.includes(term);
+    el.style.display = okF&&okQ ? "" : "none";
+    if(okF&&okQ) shown++;
+  });
+  $("empty").style.display = shown ? "none" : "block";
+}
+
+/* ---------- countdown ---------- */
+function laOffsetMs(date, tz){
+  const f = new Intl.DateTimeFormat("en-US",{timeZone:tz,hourCycle:"h23",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",second:"numeric"});
+  const p = Object.fromEntries(f.formatToParts(date).map(x=>[x.type,+x.value]));
+  return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second) - Math.floor(date.getTime()/1000)*1000;
+}
+function nextFriday(){
+  const fd = DATA.fridayDiscussion, tz = fd.timezone, [hh,mm] = fd.time.split(":").map(Number);
+  const now = new Date();
+  const f = new Intl.DateTimeFormat("en-US",{timeZone:tz,year:"numeric",month:"numeric",day:"numeric"});
+  const p = Object.fromEntries(f.formatToParts(now).map(x=>[x.type,+x.value]));
+  for(let k=0;k<15;k++){
+    const day = new Date(Date.UTC(p.year,p.month-1,p.day+k));
+    if(day.getUTCDay()!==5) continue;
+    const wall = Date.UTC(day.getUTCFullYear(),day.getUTCMonth(),day.getUTCDate(),hh,mm);
+    const t = new Date(wall - laOffsetMs(new Date(wall),tz));
+    if(t > now) return t;
+  }
+  return null;
+}
+let target = null, targetTitle = "";
+function pickNext(){
+  const now = new Date(), ev = [];
+  DATA.classes.forEach(c => { if(c.at){ const t = new Date(c.at); if(t>now) ev.push({t, title:`${L("cls")} ${c.n} — ${c.title}`}); } });
+  const fr = nextFriday(); if(fr) ev.push({t:fr, title:L("fridayEvt")});
+  ev.sort((a,b)=>a.t-b.t);
+  target = ev[0] ? ev[0].t : null; targetTitle = ev[0] ? ev[0].title : "";
+  $("nextTitle").textContent = targetTitle;
+  if(target){
+    const loc = lang==="ar" ? "ar-u-nu-latn" : "en-GB";
+    $("nextWhen").textContent = new Intl.DateTimeFormat(loc,{weekday:"long",day:"numeric",month:"long",hour:"2-digit",minute:"2-digit",timeZoneName:"short"}).format(target) + " · " + L("yourTime");
+  }
+  $("nextCard").style.display = target ? "" : "none";
+}
+function tick(){
+  if(!target) return;
+  let d = target - new Date();
+  if(d <= 0){ pickNext(); if(!target) return; d = target - new Date(); }
+  const s = Math.floor(d/1000);
+  $("cdD").textContent = Math.floor(s/86400);
+  $("cdH").textContent = String(Math.floor(s%86400/3600)).padStart(2,"0");
+  $("cdM").textContent = String(Math.floor(s%3600/60)).padStart(2,"0");
+  $("cdS").textContent = String(s%60).padStart(2,"0");
+}
+
+/* ---------- language ---------- */
+function setLang(l){
+  lang = l;
+  try{ localStorage.setItem("amba-lang", l); }catch(e){}
+  const r = document.documentElement; r.lang = l; r.dir = l==="ar" ? "rtl" : "ltr";
+  document.title = L("pageTitle");
+  document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = L(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { const t = L(el.dataset.i18nPh); el.placeholder = t; el.setAttribute("aria-label", t); });
+  $("langBtn").textContent = L("langBtn");
+  render(); pickNext(); tick();
+}
+function toggleTheme(){
+  const r = document.documentElement;
+  const dark = getComputedStyle(r).getPropertyValue("--bg").trim() === "#0e0f1a";
+  r.setAttribute("data-theme", dark ? "light" : "dark");
+}
+
+/* ---------- events ---------- */
+$("chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(x => x.classList.remove("on"));
+  b.classList.add("on"); filter = b.dataset.f; apply();
+});
+$("q").addEventListener("input", e => { term = e.target.value.trim().toLowerCase(); apply(); });
+$("langBtn").addEventListener("click", () => setLang(lang==="ar" ? "en" : "ar"));
+$("themeBtn").addEventListener("click", toggleTheme);
+
+grid.addEventListener("change", e => {
+  const cb = e.target.closest("input[type=checkbox][data-n]"); if(!cb) return;
+  const n = cb.dataset.n; PROG[n] = PROG[n] || {}; PROG[n][cb.dataset.k] = cb.checked;
+  store.set("amba-progress", PROG);
+  if(cb.dataset.k === "w") cb.closest(".card").classList.toggle("done", cb.checked);
+  stats();
+});
+const timers = {};
+grid.addEventListener("input", e => {
+  const ta = e.target.closest("textarea[data-n]"); if(!ta) return;
+  const n = ta.dataset.n, ok = ta.parentElement.querySelector(".saved");
+  ok.classList.remove("on");
+  clearTimeout(timers[n]);
+  timers[n] = setTimeout(() => {
+    if(ta.value.trim()) NOTES[n] = ta.value; else delete NOTES[n];
+    store.set("amba-notes", NOTES);
+    ok.classList.add("on"); setTimeout(() => ok.classList.remove("on"), 1500);
+  }, 400);
+});
+
+document.addEventListener("keydown", e => {
+  if(e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target, typing = t.tagName==="INPUT" && t.type!=="checkbox" || t.tagName==="TEXTAREA";
+  if(typing){ if(e.key==="Escape") t.blur(); return; }
+  const k = e.key;
+  const cards = [...grid.querySelectorAll(".card")].filter(c => c.style.display !== "none");
+  const cur = cards.indexOf(document.activeElement.closest(".card"));
+  if(k==="ArrowDown" || k==="j"){ e.preventDefault(); (cards[cur+1] || cards[0])?.focus(); }
+  else if(k==="ArrowUp" || k==="k"){ e.preventDefault(); (cards[cur-1] || cards[cards.length-1])?.focus(); }
+  else if(k==="Enter" && document.activeElement.classList.contains("card")){
+    const a = document.activeElement.querySelector("a.rec"); if(a) window.open(a.href, "_blank", "noopener");
+  }
+  else if(k==="/" || k==="؟"){ e.preventDefault(); $("q").focus(); }
+  else if(k==="l" || k==="L" || k==="ل"){ setLang(lang==="ar" ? "en" : "ar"); }
+  else if(k==="t" || k==="T" || k==="ف"){ toggleTheme(); }
+});
+</script>
+</body>
+</html>
